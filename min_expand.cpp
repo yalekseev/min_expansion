@@ -2,11 +2,11 @@
 #include <vector>
 
 bool min_expand(const std::vector<int> & base_values, int value, std::vector<int> & coefficients) {
-  std::vector<int> value_min_coefficients_count(value + 1, 0);
-
   if (value == 0) {
     return false;
   }
+
+  std::vector<int> value_min_coefficients_count(value + 1, 0);
 
   // Create 'value -> min_coefficients_count' mapping
   for (int curr_value = 1; curr_value <= value; ++curr_value) {
